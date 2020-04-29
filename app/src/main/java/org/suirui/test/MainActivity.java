@@ -71,7 +71,7 @@ public class MainActivity extends Activity implements LoginListener, MeetingList
         VideoConfiguration videoConfiguration = new VideoConfiguration.VideoConfigBuilder(this)
                 .notifyIcon(R.drawable.ic_con)//消息通知图标
                 .notifAppName("会见")
-//                .setInvite(false)//是否打开邀请功能
+                .setInvite(true)//是否打开邀请功能
                 .setSRLog(true)//是否打开log
                 .setSRMessageAlert(true)//是否打开终端加入/离开，以及结束会议的相关提示
                 .setSREndMeetingDialog(true)//是否打开结束/离开会议的二次确认框
@@ -81,7 +81,6 @@ public class MainActivity extends Activity implements LoginListener, MeetingList
                 .setSROnlive(true)//是有有直播
                 .setSRRecord(true)//是否有录制
                 .setSelectType(SRPaas.VideoType.SR_CFG_VIDEO_SIZE_720P.getValue(), SRPaas.VideoType.SR_CFG_VIDEO_SIZE_180P.getValue())//选流大小
-                .setInvite(true)
 //                .setCameraRotation(cameraRotation, sdkCameraRotation)
                 .build();
         VideoPlugManage.getManager().init(videoConfiguration);
