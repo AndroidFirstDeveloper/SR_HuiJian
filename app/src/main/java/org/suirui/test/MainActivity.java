@@ -31,7 +31,7 @@ import java.util.List;
 public class MainActivity extends Activity implements LoginListener, MeetingListener {
     public static final String appId = "beb7da4ced7c42a085c3c99697f9aa42";
     public static final String secretKey = "beb7da4ced7c42a085c3c99697f9aa42";
-    //    public static String doMain = "http://lab.suirui.com";//需要更换自己的测试环境
+//        public static String doMain = "http://lab.suirui.com";//需要更换自己的测试环境
     public static String doMain = "http://47.93.195.90";//需要更换自己的测试环境
     private final String TAG = MainActivity.class.getName();
     EditText meet_id, meet_pwd;
