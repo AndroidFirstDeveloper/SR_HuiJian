@@ -31,7 +31,7 @@ import java.util.List;
 public class MainActivity extends Activity implements LoginListener, MeetingListener {
     public static final String appId = "beb7da4ced7c42a085c3c99697f9aa42";
     public static final String secretKey = "beb7da4ced7c42a085c3c99697f9aa42";
-//        public static String doMain = "http://lab.suirui.com";//需要更换自己的测试环境
+    //        public static String doMain = "http://lab.suirui.com";//需要更换自己的测试环境
     public static String doMain = "http://47.93.195.90";//需要更换自己的测试环境
     private final String TAG = MainActivity.class.getName();
     EditText meet_id, meet_pwd;
@@ -198,6 +198,11 @@ public class MainActivity extends Activity implements LoginListener, MeetingList
         Log.e(TAG, "MainActivity...登录的状态....isState:" + isState + " token:" + token + " uid:" + uid + " nikeName:" + nikeName);
     }
 
+    /**
+     * confId 会议号 3.
+     * *termInfo 参会人信息(uid,tername) 4.
+     * *srError 离开信息(getCur_error:离开状态码；getDetail_reason:离开信息；get Brief_reason:离开信息)
+     */
     @Override
     public void onTermLeaveCallBack(String confId, TermInfo termInfo, SRError srError) {
         if (termInfo != null) {
