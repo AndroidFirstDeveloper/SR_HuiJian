@@ -210,6 +210,9 @@ public class MainActivity extends Activity implements LoginListener, MeetingList
         }
     }
 
+    /**
+     * confId 会议号 3. termInfo 参会人信息(uid,tername)
+     */
     @Override
     public void onNewTermJoinCallBack(String confId, TermInfo termInfo) {
         if (termInfo != null) {
